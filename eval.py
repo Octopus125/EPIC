@@ -12,12 +12,11 @@ def calculate_uniqueness(peptides):
     return len(unique_peptides) / len(peptides) if peptides else 0
 
 def calculate_similarity(seq1, seq2):
-    # 使用 globalxx 进行全局序列比对
     alignments = pairwise2.align.globalxx(seq1, seq2)
     if alignments:
         best_alignment = alignments[0]
         score = best_alignment.score
-        max_score = max(len(seq1), len(seq2))  # 假设最大得分情况，匹配得 1 分
+        max_score = max(len(seq1), len(seq2))  
         similarity = score / max_score
         return similarity
     return 0

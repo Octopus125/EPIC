@@ -80,7 +80,7 @@ class PMHCPredModel(pl.LightningModule):
         self.log('val_auroc', auroc)
         self.auroc.reset()
 
-        aupr = self.aupr.compute()  # 计算 AUPR
+        aupr = self.aupr.compute()  
         self.log('val_aupr', aupr)
         self.aupr.reset()
 

@@ -19,7 +19,7 @@ class PMHCPredDataset(Dataset):
         self.negative_pep_list = negative_samples['pep'].tolist()        
 
 
-    def __getitem__(self, index): # index 为偶数时为正样本，为奇数时为负样本
+    def __getitem__(self, index): 
         if index % 2 == 0:
             index = index // 2
             pep = self.positive_pep_list[index]

@@ -1,9 +1,6 @@
 import random
 import numpy as np
 import torch
-import torch.nn.functional as F
-
-# from utils.constant import aa_count_freq
 
 def set_random_seed(seed, deterministic=False):
     torch.manual_seed(seed)
